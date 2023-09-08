@@ -1,0 +1,10 @@
+node_modules
+/.netlify
+
+/.cache
+/build
+/public/build
+.env
+.idea
+
+.DS_Store
