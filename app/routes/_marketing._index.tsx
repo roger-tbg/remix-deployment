@@ -1,6 +1,7 @@
 import { Link } from '@remix-run/react';
 import { FaArrowRight, FaChartBar, FaDollarSign } from 'react-icons/fa';
 import type { HeadersFunction } from '@remix-run/node'; // or cloudflare/deno
+import { metaV1 } from '@remix-run/v1-meta';
 
 export default function Index() {
   return (
@@ -47,11 +48,18 @@ export default function Index() {
   );
 }
 
-export function meta() {
-  return {
+// export function meta() {
+//   return {
+//     title: 'RemixExpenses - The Complete App',
+//     description: 'Manage your expenses with ease.',
+//   };
+// }
+
+export function meta(args: any) {
+  return metaV1(args, {
     title: 'RemixExpenses - The Complete App',
     description: 'Manage your expenses with ease.',
-  };
+  });
 }
 
 export const headers: HeadersFunction = ({ parentHeaders }) => ({

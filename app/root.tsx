@@ -13,12 +13,21 @@ import {
 
 import sharedStyles from '~/styles/shared.css';
 import Error from '~/components/util/Error';
+import { metaV1 } from '@remix-run/v1-meta';
 
-export const meta = () => ({
-  charset: 'utf-8',
-  title: 'New Remix App',
-  viewport: 'width=device-width,initial-scale=1',
-});
+// export const meta = (args) => ({
+//   charset: 'utf-8',
+//   title: 'New Remix App',
+//   viewport: 'width=device-width,initial-scale=1',
+// });
+
+export function meta(args: any) {
+  return metaV1(args, {
+    charset: 'utf-8',
+    title: 'New Remix App',
+    viewport: 'width=device-width,initial-scale=1',
+  });
+}
 
 function Document({ title, children }: any) {
   const matches = useMatches();

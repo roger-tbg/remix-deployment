@@ -40,15 +40,15 @@ export async function action({ params, request }) {
   }
 }
 
-export function meta({ params, location, data, parentsData }) {
-  const expense = parentsData['routes/_expenses.expenses'].find(
-    (expense) => expense.id === params.id,
-  );
-  return {
-    title: expense.title,
-    description: 'Update expense.',
-  };
-}
+// export function meta({ params, location, data, parentsData }) {
+//   const expense = parentsData['routes/_expenses.expenses'].find(
+//     (expense) => expense.id === params.id,
+//   );
+//   return {
+//     title: expense.title,
+//     description: 'Update expense.',
+//   };
+// }
 
 export function headers({ parentHeaders }) {
   return {
