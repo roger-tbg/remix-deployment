@@ -4,7 +4,6 @@ import { FaDownload, FaPlus } from 'react-icons/fa';
 import { getExpenses } from '~/data/expenses.server';
 import { json } from '@remix-run/node';
 import { authenticator } from '../services/auth.server';
-import { metaV1 } from '@remix-run/v1-meta';
 
 export default function ExpensesIndexLayout() {
   const expenses = useLoaderData();
@@ -57,12 +56,12 @@ export async function loader({ request }) {
 //   };
 // }
 
-export function meta(args) {
-  return metaV1(args, {
-    title: 'Expenses',
-    description: 'List of expenses.',
-  });
-}
+// export function meta(args) {
+//   return metaV1(args, {
+//     title: 'Expenses',
+//     description: 'List of expenses.',
+//   });
+// }
 
 export function headers({ loaderHeaders }) {
   return {

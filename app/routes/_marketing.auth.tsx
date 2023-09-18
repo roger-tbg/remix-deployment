@@ -2,7 +2,6 @@ import AuthForm from '~/components/auth/AuthForm';
 import authStyles from '~/styles/auth.css';
 import type { ActionArgs } from '@remix-run/node';
 import { authenticator, login } from '~/services/auth.server';
-import { metaV1 } from '@remix-run/v1-meta';
 
 // interface AuthFormData {
 //   email: string;
@@ -26,11 +25,11 @@ export async function action({ request }: ActionArgs) {
 //   title: 'New Auth',
 // });
 
-export function meta(args: any) {
-  return metaV1(args, {
-    title: 'New Auth',
-  });
-}
+// export function meta(args: any) {
+//   return metaV1(args, {
+//     title: 'New Auth',
+//   });
+// }
 
 export function links() {
   return [{ rel: 'stylesheet', href: authStyles }];
