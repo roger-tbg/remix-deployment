@@ -1,6 +1,7 @@
 {
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev --manual",
@@ -9,7 +10,6 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@netlify/functions": "^1.4.0",
     "@prisma/client": "^4.14.1",
     "@remix-run/css-bundle": "1.19.3",
     "@remix-run/node": "1.19.3",
